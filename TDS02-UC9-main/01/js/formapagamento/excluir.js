@@ -3,12 +3,15 @@ const id = urlParams.get('id');
 
 async function buscarDetalhes() {
     try {
-        const response = await fetch(`${API_BASE_URL}/FormaPagamento/${id}`,
-            { 
+        const response = await fetch(
+            `${API_BASE_URL}/FormaPagamento/${id}`,
+            {
                 headers: getHeaders()
             }
         );
-        if (!response.ok) throw new Error('Erro ao carregar forma de pagamento');
+
+        if (!response.ok)
+            throw new Error('Erro ao carregar forma de pagamento');
 
         const formaPagamento = await response.json();
 
@@ -17,6 +20,7 @@ async function buscarDetalhes() {
         `;
     } catch (error) {
         console.error("Erro ao carregar detalhes:", error);
+
         document.getElementById('dados-formapagamento').innerHTML =
             '<p style="color:red;">Erro ao carregar dados.</p>';
     }

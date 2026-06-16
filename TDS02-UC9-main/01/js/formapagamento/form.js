@@ -21,7 +21,6 @@ async function carregarFormaPagamento() {
             const formaPagamento = await response.json();
 
             document.getElementById('nome').value = formaPagamento.nome;
-            document.getElementById('ativo').checked = formaPagamento.ativo;
         }
         catch (error) {
             console.error(error);
@@ -35,8 +34,7 @@ form.addEventListener('submit', async (e) => {
 
     const formaPagamentoDados = {
         id: id ? parseInt(id) : 0,
-        nome: document.getElementById('nome').value.trim(),
-        ativo: document.getElementById('ativo').checked
+        nome: document.getElementById('nome').value.trim()  
     };
 
     const method = id ? 'PUT' : 'POST';

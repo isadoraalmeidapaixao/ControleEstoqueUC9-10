@@ -59,7 +59,7 @@ namespace ControleEstoque.API.Services
             };
         }
 
-        public async Task AtualizarAsync(AtualizarFormaPagamentoDto dto)
+        public async Task<FormaPagamentoDto> AtualizarAsync(AtualizarFormaPagamentoDto dto)
         {
             var formaPagamento = await _context.FormasPagamento.FindAsync(dto.Id);
 

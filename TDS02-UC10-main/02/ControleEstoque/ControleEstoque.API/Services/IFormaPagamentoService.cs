@@ -7,7 +7,7 @@ namespace ControleEstoque.API.Services
         Task<IEnumerable<FormaPagamentoDto>> ObterTodosAsync();
         Task<FormaPagamentoDto?> ObterPorIdAsync(int id);
         Task<FormaPagamentoDto> CriarAsync(CriarFormaPagamentoDto dto);
-        Task <FormaPagamentoDto>AtualizarAsync(AtualizarFormaPagamentoDto dto);
+        Task<FormaPagamentoDto> AtualizarAsync(AtualizarFormaPagamentoDto dto);
         Task RemoverAsync(int id);
     }
 }

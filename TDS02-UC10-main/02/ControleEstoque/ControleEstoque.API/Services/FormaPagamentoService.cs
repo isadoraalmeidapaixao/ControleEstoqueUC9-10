@@ -61,7 +61,7 @@ namespace ControleEstoque.API.Services
 
         public async Task<FormaPagamentoDto> AtualizarAsync(AtualizarFormaPagamentoDto dto)
         {
-            var formaPagamento = await _context.FormasPagamento.FindAsync(dto.Id);
+            var formaPagamento = await _context.FormasPagamento.FindAsync(id);
 
             if (formaPagamento != null)
             {

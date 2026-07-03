@@ -7,6 +7,7 @@ namespace ControleEstoque.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class FormaPagamentoController : ControllerBase
     {
         private readonly IFormaPagamentoService _formaPagamentoService;
